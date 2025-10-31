@@ -1,0 +1,24 @@
+{
+  "featuredSongs": [
+    {
+      "title": "Blinding Lights",
+      "artist": "The Weeknd",
+      "cover": "blindinglights.png"
+    },
+    {
+      "title": "Summertime Sadness",
+      "artist": "Lana Del Ray",
+      "cover": "summertime.png"
+    },
+    {
+      "title": "Nokia",
+      "artist": "Drake",
+      "cover": "nokia.png"
+    },
+    {
+      "title": "Kill Bill",
+      "artist": "SZA",
+      "cover": "killbill.png"
+    }
+  ]
+}

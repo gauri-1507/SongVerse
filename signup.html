@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sign Up | SongVerse</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header container">
+    <nav class="navbar">
+      <div class="nav-inner container" style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="logo">SONGVERSE</div>
+        <div class="nav-links">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="community.html">EXPLORE</a>
+          <a href="uploadsong.html">UPLOAD SONG</a>
+          <a href="login.html">LOGIN</a>
+          <a href="signup.html" class="active">SIGN UP</a>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" style="padding:40px 0;">
+    <div class="form-panel">
+      <h2>Create an Account</h2>
+      <form>
+        <label class="text-muted">Full Name</label>
+        <input type="text" placeholder="Your full name" required>
+        <label class="text-muted">Email</label>
+        <input type="email" placeholder="you@example.com" required>
+        <label class="text-muted">Password</label>
+        <input type="password" placeholder="Create a password" required>
+        <label class="text-muted">Confirm Password</label>
+        <input type="password" placeholder="Confirm password" required>
+        <div style="margin-top:14px;">
+          <button class="btn btn-primary" type="submit">Sign Up</button>
+        </div>
+      </form>
+      <p style="margin-top:12px;">Already have an account? <a href="login.html">Login</a></p>
+    </div>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-links">
+      <a href="#">CONTACT</a>
+      <a href="#">PRIVACY</a>
+    </div>
+    <div class="footer-copy">© 2025 SongVerse</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+[
+  {
+    "name": "The Weeknd",
+    "genre": "R&B / Pop",
+    "image": "weeknd.webp",
+    "description": "Known for his smooth vocals and dark pop sound that blends R&B and synthwave."
+  },
+  {
+    "name": "Lana Del Rey",
+    "genre": "Alternative / Dream Pop",
+    "image": "lana.png",
+    "description": "Known for cinematic, nostalgic music that feels timeless and melancholic."
+  },
+  {
+    "name": "Taylor Swift",
+    "genre": "Pop / Indie",
+    "image": "taylor.png",
+    "description": "Master storyteller who blends pop and folk influences into emotional narratives."
+  },
+  {
+    "name": "SZA",
+    "genre": "R&B / Soul",
+    "image": "https://i.scdn.co/image/ab6761610000e5ebedb7b9ccf4af7cfcc77dca5e",
+    "description": "Critically acclaimed for her dreamy, soulful style and lyrical vulnerability."
+  },
+  {
+    "name": "Kendrick Lamar",
+    "genre": "R&B / Pop",
+    "image": "kendrick.webp",
+    "description": "Poetic storytelling and lyrical genius."
+  }
+]
+

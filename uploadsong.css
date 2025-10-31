@@ -1,0 +1,193 @@
+ /* Upload wrapper */
+.upload-wrap {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 18px;
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.96), rgba(248,252,255,0.96));
+  box-shadow: var(--shadow-1);
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+.upload-left { 
+  flex: 1;
+  padding: 18px;
+}
+
+.upload-right { 
+  width: 320px;
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.upload-left h2 { 
+  font-size: 24px;
+  color: #163a65;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.upload-left p { 
+  color: var(--muted);
+  margin-bottom: 14px;
+}
+
+.upload-card {
+  background: linear-gradient(180deg, #eef9ff, #f4fbff);
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #e4f2ff;
+}
+
+.upload-card label {
+  display: block;
+  font-weight: 700;
+  margin-top: 8px;
+  color: #163a55;
+}
+
+.upload-card input[type="text"],
+.upload-card input[type="file"],
+.upload-card textarea {
+  width: 100%;
+  margin-top: 8px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #dbeefc;
+  background: #fff;
+}
+
+.upload-card textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.upload-card button {
+  margin-top: 12px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  font-weight: 800;
+}
+
+/* Right column images */
+.upload-right img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 28px rgba(10,30,50,0.06);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .upload-wrap {
+    flex-direction: column;
+    padding: 14px;
+  }
+  .upload-right {
+    width: 100%;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .upload-right img {
+    width: 48%;
+  }
+}
+
+/* Uploaded song cards (append to uploadsong.css) */
+.uploaded-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.upload-song-card {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  background: linear-gradient(180deg,#fff,#f7fbff);
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #e3f0ff;
+  box-shadow: 0 6px 18px rgba(10,30,50,0.04);
+}
+
+.upload-song-card .usc-left {
+  width: 110px;
+  flex-shrink: 0;
+}
+
+.upload-song-card .usc-thumb img {
+  width: 110px;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.upload-song-card .usc-mid {
+  flex: 1;
+}
+
+.usc-title {
+  margin: 0 0 6px 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #103d60;
+}
+
+.usc-meta {
+  font-size: 13px;
+  color: #3a5566;
+  margin-bottom: 8px;
+}
+
+.usc-desc {
+  font-size: 13px;
+  color: #425a67;
+  margin-bottom: 8px;
+}
+
+.usc-player {
+  width: 100%;
+  margin-top: 6px;
+}
+
+.usc-actions {
+  display: flex;
+  align-items: flex-start;
+}
+
+.btn.small {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  background: #fff;
+  border: 1px solid rgba(10,30,50,0.06);
+  cursor: pointer;
+}
+
+.btn.small.btn-delete {
+  color: #c23a3a;
+  border-color: rgba(194,58,58,0.08);
+  background: #fff7f7;
+}
+
+.no-thumb {
+  width: 110px;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: linear-gradient(180deg,#eef8ff,#f6fbff);
+  color: #163a55;
+  font-weight: 600;
+}
+

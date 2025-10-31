@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SongVerse</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header container">
+    <nav class="navbar">
+      <div class="nav-inner container" style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="logo">SONGVERSE</div>
+        <div class="nav-links" role="navigation" aria-label="Main Navigation">
+          <a href="index.html" class="active">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="community.html">EXPLORE</a>
+          <a href="uploadsong.html">UPLOAD SONG</a>
+          <a href="login.html">LOGIN</a>
+          <a href="signup.html">SIGN UP</a>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container hero">
+      <div class="hero-card">
+        <h1 class="h-title">Share Your Music. Get Heard. Connect.</h1>
+        <p class="h-sub">Upload your songs, create playlists, follow creators and connect with music lovers worldwide.</p>
+        <div class="hero-buttons">
+          <a class="btn btn-primary" href="community.html">START LISTENING</a>
+          <a class="btn btn-ghost" href="uploadsong.html">UPLOAD SONG</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Songs Section -->
+<section class="featured-songs">
+  <h2><span class="note"></span> Featured Songs</h2>
+
+  <div class="song-grid">
+    <div class="song-card">
+      <img src="blindinglights.png" alt="Blinding Lights - The Weeknd">
+      <h3>Blinding Lights</h3>
+      <p>The Weeknd</p>
+      <audio controls>
+        <source src="blindinglights.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+
+    <div class="song-card">
+      <img src="summertime.png" alt="Summertime Sadness - Lana Del Rey">
+      <h3>Summertime Sadness</h3>
+      <p>Lana Del Rey</p>
+      <audio controls>
+        <source src="Lana-Del-Rey-Summertime-Sadness-(RawPraise.ng).mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+
+    <div class="song-card">
+      <img src="nokia.png" alt="Nokia - Drake">
+      <h3>Nokia</h3>
+      <p>Drake</p>
+      <audio controls>
+        <source src="Nokia Drake (pagalall.com).mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+
+    <div class="song-card">
+      <img src="killbill.png" alt="Kill Bill - SZA">
+      <h3>Kill Bill</h3>
+      <p>SZA</p>
+      <audio controls>
+        <source src="Kill Bill - SZA - .mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+  </div>
+</section>
+
+<section class="featured-artists">
+  <h2>Featured Artists</h2>
+  <div id="artistContainer" class="artist-grid"></div>
+</section>
+
+<div class="featured-artists">
+  <div class="artist-card">
+    <img src="weeknd.webp" alt="The Weeknd">
+    <h3>The Weeknd</h3>
+    <p>Redefining R&B with his dark, cinematic sound.</p>
+  </div>
+
+  <div class="artist-card">
+    <img src="lana.png" alt="Lana Del Rey">
+    <h3>Lana Del Rey</h3>
+    <p>Melancholic melodies and nostalgic storytelling.</p>
+  </div>
+
+  <div class="artist-card">
+    <img src="taylor.png" alt="Taylor Swift">
+    <h3>Taylor Swift</h3>
+    <p>From country roots to global pop legend.</p>
+  </div>
+
+  <div class="artist-card">
+    <img src="kendrick.webp" alt="Kendrick Lamar">
+    <h3>Kendrick Lamar</h3>
+    <p>Poetic storytelling and lyrical genius.</p>
+  </div>
+</div>
+
+
+
+    <section class="community container community">
+      <h2 class="community-title center">Community Section</h2>
+      <p class="community-subtext center text-muted">Connect with listeners, join clubs and share your passion.</p>
+
+      <div class="community-grid">
+        <div class="club-card">
+          <h3 style="margin-bottom:8px;">SWIFTIES CLUB</h3>
+          <p style="font-weight:600">~ Which 1989 (Taylor’s Version) track is your favorite?<br>~ 250 members active</p>
+        </div>
+
+        <div class="club-card">
+          <h3 style="margin-bottom:8px;">XO CREW</h3>
+          <p style="font-weight:600">~ Best Weeknd live performance?<br>~ 180 members sharing clips</p>
+        </div>
+
+        <div class="club-card">
+          <h3 style="margin-bottom:8px;">LANA LOVERS</h3>
+          <p style="font-weight:600">~ Favorite lyric from Born to Die?<br>~ 120 members in threads</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-links">
+      <a href="#">CONTACT</a>
+      <a href="#">PRIVACY</a>
+      <a href="#">TERMS</a>
+    </div>
+    <div class="footer-copy">© 2025 SongVerse</div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="indexData.js"></script>
+
+  <script>
+  fetch('artists.json')
+    .then(response => response.json())
+    .then(artists => {
+      const container = document.getElementById('artistContainer');
+      artists.forEach(artist => {
+        const card = document.createElement('div');
+        card.className = 'artist-card';
+        card.innerHTML = `
+          <img src="${artist.image}" alt="${artist.name}">
+          <h3>${artist.name}</h3>
+          <p class="genre">${artist.genre}</p>
+          <p class="desc">${artist.description}</p>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(error => console.error('Error loading artists:', error));
+</script>
+
+
+</body>
+</html>
+

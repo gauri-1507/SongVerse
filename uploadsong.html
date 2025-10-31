@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Upload Song | SongVerse</title>
+  <link rel="stylesheet" href="global.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="uploadsong.css">
+</head>
+<body>
+  <header class="site-header container">
+    <nav class="navbar">
+      <div class="nav-inner container" style="display:flex;align-items:center;justify-content:space-between;">
+        <div class="logo">SONGVERSE</div>
+        <div class="nav-links">
+          <a href="index.html">HOME</a>
+          <a href="about.html">ABOUT</a>
+          <a href="community.html">EXPLORE</a>
+          <a href="uploadsong.html" class="active">UPLOAD SONG</a>
+          <a href="login.html">LOGIN</a>
+          <a href="signup.html">SIGN UP</a>
+        </div>
+        <button class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" style="padding:24px 0;">
+    <div class="upload-wrap">
+      <div class="upload-left">
+        <h2>Share Your Music with the World </h2>
+        <p>Upload your song, add details, and let listeners discover your sound.</p>
+
+        <div class="upload-card">
+          <form>
+            <label>Song Title</label>
+            <input type="text" placeholder="Enter song title" required>
+
+            <label>Artist Name</label>
+            <input type="text" placeholder="Artist name" required>
+
+            <label>Upload File</label>
+            <input type="file" accept="audio/*">
+
+            <label>Album Cover</label>
+            <input type="file" accept="image/*">
+
+            <label>Genre</label>
+            <input type="text" placeholder="Pop, Indie, Hip-hop, etc.">
+
+            <label>Description</label>
+            <textarea placeholder="Write a short description"></textarea>
+
+            <button type="submit">UPLOAD NOW</button>
+          </form>
+        </div>
+        
+        <section id="uploaded-list" class="uploaded-list" aria-live="polite" style="margin-top:18px;"></section>
+
+      </div>
+
+      <aside class="upload-right">
+        <img src="weeknd.webp" alt="Artwork 1">
+        
+      </aside>
+    </div>
+  </main>
+
+  <footer class="site-footer container">
+    <div class="footer-links">
+      <a href="#">CONTACT</a>
+      <a href="#">PRIVACY</a>
+    </div>
+    <div class="footer-copy">© 2025 SongVerse</div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="uploadsong.js"></script>
+</body>
+</html> 
